@@ -7,7 +7,7 @@ Compact Power BI report for analyzing ride bookings: trips, status mix, cancella
 ➡️ https://app.powerbi.com/view?r=eyJrIjoiNzI4NzQ1OTgtYzFjNy00ODNjLTg0MzEtNGQ0Zjc1ODAxZDgyIiwidCI6IjJkMzE5NGUzLTE2NTQtNDZiZC1iYWUyLWFkMzdiYTExYjBhZSIsImMiOjl9
 
 
-## 📦 Data
+## Data
 - **Source file:** `./data/ncr_ride_bookings.csv`
 - **Key fields:** Date, Time, Booking ID, Booking Status, Booking Value, Ride Distance,  
   Customer Rating, Driver Ratings, Payment Method, Vehicle Type/Class, Avg VTAT, Avg CTAT.
@@ -16,7 +16,7 @@ Compact Power BI report for analyzing ride bookings: trips, status mix, cancella
 
 ---
 
-## 🧭 Report Pages
+##  Report Pages
 1. **Overview Look** – Trips by month, booking status classification, Cancelled Bookings KPI.  
 2. **Performance & Operations** – Cancel reasons (customer/driver), **Cancellation Rate %**, peak hour/day.  
 3. **Revenue Insights** – Distance by day, **Payment Mix** (UPI/Cash/Wallet/Card).  
@@ -24,7 +24,7 @@ Compact Power BI report for analyzing ride bookings: trips, status mix, cancella
 
 ---
 
-## 🧮 KPIs
+##  KPIs
 - **Total Trips**, **Completed Trips**, **Cancelled Trips**, **Cancellation Rate %**  
 - **Net Revenue** (Completed only), **AOV = Net Revenue / Completed Trips**  
 - **Avg Ride Duration (min)** = `DATEDIFF(Avg VTAT, Avg CTAT, MINUTE)` with simple outlier rules  
@@ -32,7 +32,7 @@ Compact Power BI report for analyzing ride bookings: trips, status mix, cancella
 
 ---
 
-## 🧠 Method (Light DAX)
+##  Method (Light DAX)
 - Calculated column: **Ride Duration (min)** from VTAT→CTAT (ignore negative or >180 min).  
 - Measure: **Avg Ride Duration (min)** via `AVERAGEX` on non-blank rows.  
 - Normalized status → *Completed / Cancelled / No Driver Found / Incomplete*.  
