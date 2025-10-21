@@ -1,4 +1,4 @@
-# Uber Ride Analytics (Power BI)
+# Uber Ride Analytics (Power BI) 
 
 Compact Power BI report for analyzing ride bookings: trips, status mix, cancellations, revenue, ratings, ride duration, vehicle classes, and payment mix.
 
